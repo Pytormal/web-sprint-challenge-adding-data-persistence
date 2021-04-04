@@ -1,0 +1,17 @@
+1. Explain the difference between Relational Databases and SQL.
+    Relational is formatted into rows and coloumns.  a collection of rows are called a table, and each row is a single record, each table is made of one or more coloumns. 
+        Relational are databases stored in Tables
+    
+    SQL is designed  for manageing data held in relational databases
+
+
+2. Why do tables need a Primary Key?
+    essential if a table is to be considered or qualify as a relational table, data that is unque identifies each row in a table
+
+
+3. What is the name given to a table column that references the Primary Key on another table?
+    the name gigven is a foreign key
+
+
+4. What do we need in order to have a _many to many_ relationship between two tables?
+    would need items that can be used infinite amount of times and could be placed into many other tables

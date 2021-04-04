@@ -4,15 +4,15 @@ const helmet = require('helmet');
 
 
 const server = express();
-// const pRouter = require("./project/router.js");
-// const rRouter = require("./resource/router.js");
-// const tRouter = require("./task/router.js");
+const pRouter = require("./project/router.js");
+const rRouter = require("./resource/router.js");
+const tRouter = require("./task/router.js");
 
 server.use(helmet());
 server.use(express.json());
-// server.use("/api/project", pRouter);
-// server.use("/api/resource", rRouter);
-// server.use("/api/task", tRouter);
+server.use("/api/projects", pRouter);
+server.use("/api/resources", rRouter);
+server.use("/api/tasks", tRouter);
 
 server.get("/", (req, res) => {
   res.json({ hello: "Sprint Project 4.2" });
