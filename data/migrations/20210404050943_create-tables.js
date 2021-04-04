@@ -20,7 +20,9 @@ exports.up = function (knex) {
         .bigint("project_id")
         .unsigned()
         .references("project_id")
-        .inTable("projects");
+        .inTable("projects")
+        .onDelete("CASCADE")
+        .onUpdate("CASCADE");
     })
     .createTable("project_resources", (tbl) => {
       tbl.increments();
@@ -28,12 +30,16 @@ exports.up = function (knex) {
         .bigint("project_name")
         .unsigned()
         .references("project_name")
-        .inTable("projects");
+        .inTable("projects")
+        .onDelete("CASCADE")
+        .onUpdate("CASCADE");
       tbl
         .bigint("resource_id")
         .unsigned()
         .references("resource_id")
-        .inTable("resources");
+        .inTable("resources")
+        .onDelete("CASCADE")
+        .onUpdate("CASCADE");
     });
 };
 
